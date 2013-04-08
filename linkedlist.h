@@ -15,4 +15,7 @@ node *linkedlist_add_to_tail(node *list, const char *key, int value);
 
 void linkedlist_destroy(node *list);
 
+int linkedlist_dump(node *list, const char *filename);
+
+node *linkedlist_read(const char *filename);
 #endif
