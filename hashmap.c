@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 #include "hashmap.h"
 
@@ -105,8 +106,8 @@ hashmap *hashmap_read(const char *filename, int slots) {
     return hm;
 }
 
-static int get_slot(char *key, int slots) {
-    int i;
+int get_slot(char *key, int slots) {
+    unsigned int i;
     int total = 0;
 
     for (i = 0; i < strlen(key); i++) {

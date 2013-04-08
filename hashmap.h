@@ -27,6 +27,6 @@ int hashmap_dump(hashmap *hm, const char *filename);
 hashmap *hashmap_read(const char *filename, int slots);
 
 // Helper functions
-static int get_slot(char *key, int slots);
+int get_slot(char *key, int slots);
 
 #endif
